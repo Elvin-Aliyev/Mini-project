@@ -115,7 +115,11 @@ public class Counter {
         while (error) {
             if (input.hasNextInt()) {
                 answer = input.nextInt();
-                error = false;
+                if (answer < 0){
+                    System.out.println("The number can't be less than zero");
+                }else {
+                    error = false;
+                }
             } else {
                 System.out.println("Invalid input, make sure your input is a whole number");
                 input.next();
