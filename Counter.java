@@ -76,6 +76,7 @@ public class Counter {
             wholeNum = (numerator / denominator);
             fraction = (numerator % denominator);
             mixedNum = (wholeNum+" "+fraction+"/"+denominator);
+            System.out.println(mixedNum);
         }else {
             mixedNum = (numerator+"/"+denominator);
             System.out.println(mixedNum);
