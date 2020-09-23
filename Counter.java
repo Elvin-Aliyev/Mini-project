@@ -40,7 +40,6 @@ public class Counter {
     }
     //Function to find out the volume of a cylinder
     public static void cylinder(){
-        Scanner input = new Scanner(System.in);
         System.out.println("Enter the radius:");
         int radius = errorControl();
         System.out.println("Enter the height:");
@@ -82,18 +81,19 @@ public class Counter {
             System.out.println(mixedNum);
         }
     }
-    //Function for sum of all input numbers
+    //Function for sum
     public static void sum(){
-        Scanner input = new Scanner(System.in);
-        System.out.println("Write a numbers, if you write zero the program ends");
-        int number;
-        int sum = 0;
-        do {
-            number = errorControl();
-            sum += number;
-            System.out.println("Next number or write zero to end program");
-        }while (number != 0);
-            System.out.println("Sum is: "+ sum);
+        System.out.println("Write a number larger than 0");
+        int maxNumber = errorControl();
+        while (maxNumber == 0){
+            System.out.println("Number must be larger than 0, write a new number");
+            maxNumber = errorControl();
+        }
+        int sum = maxNumber;
+        for (int i = 0; i < maxNumber; i++) {
+            sum = sum + i;
+        }
+        System.out.println("The sum is: "+sum);
     }
     //Function for y=kx+m
     public static void calcPoint(){
